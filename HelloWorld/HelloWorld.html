@@ -1,0 +1,33 @@
+﻿<script type="text/javascript">
+    RED.nodes.registerType('HelloWorld',{
+        // node definition
+        category:'TEST',
+        color:'#244E66',
+        defaults:{
+        	name:{value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon:"hello.png",
+        label:function(){
+        	return this.name || "HelloWorld";
+        }
+        
+    });
+</script>
+
+<script type="text/x-red" data-template-name="HelloWorld">
+ <div class="form-row">
+   <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+   <input type="text" id="node-input-topic" placeholder="Name">
+</div>
+
+<div class="form-row">
+   <label for="node-input-topic"><i class="icon-tag"></i> Topic</label>
+   <input type="text" id="node-input-topic" placeholder="Topic">
+</div>
+</script>
+
+<script type="text/x-red" data-help-name="HelloWorld">
+ <p> Test node </p>
+</script>
